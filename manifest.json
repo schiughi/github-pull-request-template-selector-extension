@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "My GitHub Extension",
+  "version": "1.0",
+  "content_scripts": [
+    {
+      "matches": ["https://github.com/*/pulls*", "https://github.com/*/compare*"],
+      "js": ["pulls.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "host_permissions": ["https://github.com/*"]
+}
